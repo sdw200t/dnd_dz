@@ -1,0 +1,171 @@
+/* ---- RESET/BASIC STYLING ---- */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+.board {
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+
+  background-image: url(https://img.freepik.com/free-psd/premium-quality-mockup-ready-to-use_53876-57715.jpg?w=996&t=st=1693302060~exp=1693302660~hmac=f67ae966555eafe5754a7992e3f27d5d9b048e2a4cde947d88b612ad00714b54);
+  background-position: center;
+  background-size: cover;
+}
+
+/* ---- FORM ---- */
+.todo-form {
+  border-radius: 3px;
+  margin-top: auto;
+  display: none;
+}
+
+.textarea {
+  resize: none;
+  height: 60px;
+  border-radius: 3px;
+  border: none;
+  padding: 10px;
+  width: 100%;
+}
+
+.buttons {
+  display: flex;
+}
+
+.add-btn {
+  background: rgb(13, 136, 218);
+  border: none;
+  height: 35px;
+  cursor: pointer;
+  color: white;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  width: 100%;
+}
+
+.cancel-btn {
+  padding: 0 10px;
+  background: rgb(160, 17, 12);
+  border: none;
+  height: 35px;
+  cursor: pointer;
+  color: white;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75px;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.addtask {
+  height: 30px;
+  background: rgba(155, 155, 155, 0.3);
+  border-radius: 3px;
+  margin-top: 5px;
+  display: flex;
+  font-size: 12px;
+  align-items: center;
+  padding-left: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+span {
+  font-size: 20px;
+  margin-right: 10px;
+  color: white;
+}
+
+/* ---- BOARD ---- */
+.lanes {
+  display: flex;
+  align-items: flex-start;
+  justify-content: start;
+  gap: 16px;
+
+  padding: 24px 32px;
+
+  overflow: scroll;
+  height: 100%;
+}
+
+.heading {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.tasklist { /* swim-lane */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  background: #f4f4f4;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+
+  padding: 12px;
+  border-radius: 4px;
+  width: 225px;
+  min-height: 120px;
+
+  flex-shrink: 0;
+}
+
+.task {
+  background: white;
+  color: black;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+
+  padding: 12px;
+  border-radius: 4px;
+
+  font-size: 16px;
+  cursor: grabbing;
+}
+
+.is-dragging {
+  scale: 1.05;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+  background: rgb(50, 50, 50);
+  color: white;
+}
+
+
+.task {
+  position: relative;
+  /* Чтобы .close не выходил за рамки .container */
+}
+
+.close {
+  /* Ставим крестик справа */
+  position: absolute;
+  right: 0;
+  margin: 2px;
+  top: 0;
+
+  /* Скрываем крестик по умолчанию */
+  display: none;
+}
+
+.task:hover .close {
+  display: block !important;
+  /* При навидении на div в .container показать крестик */
+}

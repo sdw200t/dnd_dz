@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drag & Drop API</title>
+</head>
+
+<body>
+  <div class="board">
+
+    <div class="lanes">
+      <div class="swim-lane" id="todo-lane">
+        <h3 class="heading">Новые</h3>
+
+        <div class="tasklist">
+          <div class="task" draggable="true">
+            Задача 1
+            <button type="button" class="close">x</button>
+          </div>
+          <div class="task" draggable="true">
+            Задача 2
+            <button type="button" class="close">x</button>
+          </div>
+          <div class="task" draggable="true">
+            Задача 3
+            <button type="button" class="close">x</button>
+          </div>
+        </div>
+
+        <div class="todo-form">
+          <textarea class="textarea" placeholder="Новая задача..."></textarea>
+          <div class="buttons">
+            <button class="add-btn">Добавить</button>
+            <button class="cancel-btn">Отмена</button>
+          </div>
+        </div>
+
+        <div class="addtask"> <span> + </span> Добавить </div>
+
+      </div>
+
+      <div class="swim-lane">
+        <h3 class="heading">В работе</h3>
+
+        <div class="tasklist">
+          <div class="task" draggable="true">
+            Задача 4
+            <button type="button" class="close">x</button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="swim-lane">
+        <h3 class="heading">Закрытые</h3>
+
+        <div class="tasklist">
+          <div class="task" draggable="true">
+            Задача 5
+            <button type="button" class="close">x</button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>
